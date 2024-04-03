@@ -1,1 +1,0 @@
-import{_ as e,v as t,t as s,x as c}from"./DFBRybi9.js";const o={},n=c("p",{class:"text-red-400"},"test",-1),r=[n];function _(a,d){return s(),t("div",null,r)}const l=e(o,[["render",_]]);export{l as default};
