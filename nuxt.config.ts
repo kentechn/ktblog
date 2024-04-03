@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     serviceDomain: process.env.NUXT_SERVICE_DOMAIN,
     public: {},
   },
-  image: {
-    dir: "assets/img",
-  },
   routeRules: {
     "/tags/**": { ssr: true },
     "/": { ssr: true },
