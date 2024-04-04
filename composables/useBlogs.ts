@@ -76,7 +76,6 @@ export const getBlogs
           filters: `tags[contains]${selectedTagId.value}`,
         }),
         q: searchQuery,
-      // ...(q !== undefined && { q: `${q}` })
       })
 
       const { data, pending, error, refresh } = await useAsyncData(

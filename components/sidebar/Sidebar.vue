@@ -6,7 +6,7 @@ import BlogSearchForm from "./BlogSearchForm.vue"
 
 <template>
   <div>
-    <!-- <BlogSearchForm class="mb-4 max-md:hidden" /> -->
+    <BlogSearchForm class="mb-4 max-md:hidden" />
     <ProfileCard class="mb-4" />
     <TagsCard />
   </div>
