@@ -11,10 +11,10 @@ const items: Item[] = [
     link: "/",
     text: "ホーム",
   },
-  {
-    link: "/contact",
-    text: "お問い合わせ",
-  },
+  // {
+  //   link: "/contact",
+  //   text: "お問い合わせ",
+  // },
 ]
 
 const router = useRouter()
