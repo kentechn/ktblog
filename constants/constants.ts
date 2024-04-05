@@ -1,1 +1,1 @@
-export const FETCH_BLOGS_LIMIT = 2
+export const FETCH_BLOGS_LIMIT = 10

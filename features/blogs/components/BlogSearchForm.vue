@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseIcon from '../elements/icons/BaseIcon.vue';
+import BaseIcon from '@/components/elements/icons/BaseIcon.vue';
 import { useBlogs } from '@/composables/useBlogs';
 
 const { searchQuery } = useBlogs();
@@ -8,7 +8,7 @@ const inputValue = ref('');
 
 const searchBlogs = async () => {
   searchQuery.value = inputValue.value
-  await navigateTo({ path: '/', query: { q: searchQuery.value } });
+  await navigateTo({ path: '/', query: { q: inputValue.value } });
 };
 </script>
 

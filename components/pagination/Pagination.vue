@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { FETCH_BLOGS_LIMIT } from "@/constants/constants"
 const { currentPage, totalCount } = useBlogs()
 const router = useRouter()
 const route = useRoute()
@@ -20,7 +21,7 @@ const onClickPageNum = (page: number) => {
   <vue-awesome-paginate
     v-model="currentPage"
     :total-items="totalCount"
-    :items-per-page="2"
+    :items-per-page=FETCH_BLOGS_LIMIT
     :max-pages-shown="4"
     :on-click="onClickPageNum"
   />

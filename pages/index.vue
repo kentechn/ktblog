@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Pagination from "~/components/pagination/Pagination.vue"
 import BlogCardList from "~/features/blogs/components/BlogCardList.vue"
+import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
 
 useHead({
   title: "home",
@@ -32,7 +33,8 @@ watch(
       loading now...
     </template>
     <template v-else>
-      <BlogCardList class="px-2 mb-6" />
+      <!-- <BlogSearchForm class="mb-4 md:hidden" /> -->
+      <BlogCardList class="mb-6" />
       <div>
         <Pagination />
       </div>

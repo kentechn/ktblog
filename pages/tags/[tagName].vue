@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BlogCardList from "~/features/blogs/components/BlogCardList.vue"
 import BaseText from "~/components/elements/texts/BaseText.vue"
+import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
 
 const route = useRoute()
 
@@ -20,6 +21,7 @@ watch(data, (newData) => {
 
 <template>
   <div class="px-2">
+    <!-- <BlogSearchForm class="mb-4 md:hidden" /> -->
     <h2 class="mb-4">
       <BaseText weight="semibold" size="xl">
         {{ route.params.tagName }}

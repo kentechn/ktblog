@@ -46,6 +46,8 @@ const { value: content } = useField<string>("content")
     action="/thanks"
     @submit="submitForm"
   >
+    <!-- 下記がないとpage not foundになる -->
+    <input type="hidden" name="form-name" value="contact" />
     <div class="mb-5">
       <NameFormInput v-model:inputValue="name" />
       <ErrorMessage name="name" class="text-error" />

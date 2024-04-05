@@ -1,8 +1,7 @@
 import type { Blog, BlogListResponse, BlogCardItem } from "@/interfaces"
 import { FETCH_BLOGS_LIMIT } from "@/constants/constants"
 
-export const setSelectedTagId
-  = (selectedTagId: Ref<string>) => (tagId: string) => {
+export const setSelectedTagId = (selectedTagId: Ref<string>) => (tagId: string) => {
     selectedTagId.value = tagId
   }
 
