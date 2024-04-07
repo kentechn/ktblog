@@ -46,7 +46,8 @@ tocs.forEach((toc) => {
         <ul v-if="item.children.length > 0" class="block break-all text-wrap !break-words">
           <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap break-all !break-words">
             <div>
-              <a :href="`#${item.id}`" class="text-wrap  inline-block w-full !break-words" style="text-wrap: wrap !important; overflow-wrap: break-all !important; display: block !important;">{{ childToc.text }}</a>
+              <a :href="`#${item.id}`" class="text-wrap  inline-block w-full !break-words !break-all" style="text-wrap: wrap !important; overflow-wrap: break-all !important; display: block !important;">
+                <p class="text-wrap break-words break-all">{{ childToc.text }}</p></a>
             </div>
           </li>
         </ul>
