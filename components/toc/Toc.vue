@@ -40,14 +40,39 @@ tocs.forEach((toc) => {
 <template>
   <div class="p-4 bg-base-200 rounded-md">
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
-    <ul class="menu bg-base-200 rounded-box mt-3 inline-block w-full break-all text-wrap !break-words">
-      <li v-for="item in parentTocList" :key="item.id" class="py-1 text-wrap inline-block w-full break-all !break-words">
-        <a :href="`#${item.id}`" class="inline-block !break-words">{{ item.text }}</a>
-        <ul v-if="item.children.length > 0" class="block break-all text-wrap !break-words">
-          <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap break-all !break-words">
+    <ul
+      class="menu bg-base-200 rounded-box mt-3 inline-block w-full break-all text-wrap !break-words"
+    >
+      <li
+        v-for="item in parentTocList"
+        :key="item.id"
+        class="py-1 text-wrap inline-block w-full break-all !break-words"
+      >
+        <a :href="`#${item.id}`" class="block !break-words">{{
+          item.text
+        }}</a>
+        <ul
+          v-if="item.children.length > 0"
+          class="block break-all text-wrap !break-words"
+        >
+          <li
+            v-for="childToc in item.children"
+            :key="childToc.id"
+            class="py-1 text-wrap break-all !break-words !block !w-full"
+          >
             <div>
-              <a :href="`#${item.id}`" class="text-wrap  inline-block w-full !break-words !break-all" style="text-wrap: wrap !important; overflow-wrap: break-all !important; display: block !important;">
-                <p class="text-wrap break-words break-all">{{ childToc.text }}</p></a>
+              <a
+                :href="`#${item.id}`"
+                class="text-wrap w-full !break-words !break-all"
+                style="
+                  text-wrap: wrap !important;
+                  overflow-wrap: break-all !important;
+                  overflow-wrap: break-words !important;
+                  display: block !important;
+                "
+              >
+                {{ childToc.text }}</a
+              >
             </div>
           </li>
         </ul>
@@ -56,5 +81,4 @@ tocs.forEach((toc) => {
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
