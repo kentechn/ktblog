@@ -66,8 +66,7 @@ tocs.forEach((toc) => {
                 class="text-wrap w-full !break-words !break-all"
                 style="
                   text-wrap: wrap !important;
-                  overflow-wrap: break-all !important;
-                  overflow-wrap: break-words !important;
+                  word-wrap: break-word !important;
                   display: block !important;
                 "
               >
