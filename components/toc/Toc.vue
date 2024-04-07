@@ -43,8 +43,8 @@ tocs.forEach((toc) => {
     <ul class="menu bg-base-200 rounded-box mt-3 block w-full">
       <li v-for="item in parentTocList" :key="item.id" class="py-1 text-wrap block w-full">
         <a :href="`#${item.id}`" class="block">{{ item.text }}</a>
-        <ul v-if="item.children.length > 0" class="block">
-          <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap block">
+        <ul v-if="item.children.length > 0" class="block break-all">
+          <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap block break-all">
             <a :href="`#${item.id}`" class="text-wrap block w-full bg-primary" style="text-wrap: wrap !important; overflow-wrap: break-all !important">{{ childToc.text }}</a>
           </li>
         </ul>
