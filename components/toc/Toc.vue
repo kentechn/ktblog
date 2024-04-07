@@ -40,12 +40,12 @@ tocs.forEach((toc) => {
 <template>
   <div class="p-4 bg-base-200 rounded-md">
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
-    <ul class="menu bg-base-200 rounded-box mt-3 !break-all">
-      <li v-for="item in parentTocList" :key="item.id" class="py-1 !break-all">
-        <a :href="`#${item.id}`" class="!break-all">{{ item.text }}</a>
-        <ul v-if="item.children.length > 0" class="!break-all">
-          <li v-for="childToc in item.children" :key="childToc.id" class="py-1 !break-all">
-            <a :href="`#${item.id}`" class="!break-all">{{ childToc.text }}</a>
+    <ul class="menu bg-base-200 rounded-box mt-3">
+      <li v-for="item in parentTocList" :key="item.id" class="py-1 text-wrap">
+        <a :href="`#${item.id}`">{{ item.text }}</a>
+        <ul v-if="item.children.length > 0">
+          <li v-for="childToc in item.children" :key="childToc.id" class="py-1">
+            <a :href="`#${item.id}`" class="text-wrap">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>
