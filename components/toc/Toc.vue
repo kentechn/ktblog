@@ -42,10 +42,10 @@ tocs.forEach((toc) => {
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
     <ul class="menu bg-base-200 rounded-box mt-3">
       <li v-for="item in parentTocList" :key="item.id" class="py-1">
-        <a :href="`#${item.id}`">{{ item.text }}</a>
+        <a :href="`#${item.id}`" class="break-all">{{ item.text }}</a>
         <ul v-if="item.children.length > 0">
           <li v-for="childToc in item.children" :key="childToc.id" class="py-1">
-            <a :href="`#${item.id}`">{{ childToc.text }}</a>
+            <a :href="`#${item.id}`" class="break-all">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>

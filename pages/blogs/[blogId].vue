@@ -6,7 +6,7 @@ import BlogUpdatedAt from "@/features/blogs/components/BlogUpdatedAt.vue"
 import TagList from "@/components/tags/TagList.vue"
 
 useHead({
-  title: "article",
+  title: "blog",
   meta: [
     {
       name: "description",
