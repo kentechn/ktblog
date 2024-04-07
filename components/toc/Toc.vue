@@ -63,11 +63,10 @@ tocs.forEach((toc) => {
             <div>
               <a
                 :href="`#${item.id}`"
-                class="text-wrap w-full !break-words !break-all"
+                class=""
                 style="
-                  text-wrap: wrap !important;
                   word-wrap: break-word !important;
-                  display: block !important;
+                  word-break: break-all !important;
                 "
               >
                 {{ childToc.text }}</a
