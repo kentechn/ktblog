@@ -45,7 +45,7 @@ tocs.forEach((toc) => {
         <a :href="`#${item.id}`">{{ item.text }}</a>
         <ul v-if="item.children.length > 0">
           <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap block">
-            <a :href="`#${item.id}`" class="text-wrap block w-full">{{ childToc.text }}</a>
+            <a :href="`#${item.id}`" class="text-wrap block w-full bg-primary" style="text-wrap: wrap !important; overflow-wrap: break-all !important">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>
@@ -54,8 +54,4 @@ tocs.forEach((toc) => {
 </template>
 
 <style scoped>
-a {
-  text-wrap: wrap !important;
-  overflow-wrap: break-all;
-}
 </style>
