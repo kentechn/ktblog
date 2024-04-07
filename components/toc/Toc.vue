@@ -55,7 +55,7 @@ tocs.forEach((toc) => {
 
 <style scoped>
 a {
-  text-wrap: wrap;
+  text-wrap: wrap !important;
   overflow-wrap: break-all;
 }
 </style>
