@@ -44,8 +44,8 @@ tocs.forEach((toc) => {
       <li v-for="item in parentTocList" :key="item.id" class="py-1 text-wrap">
         <a :href="`#${item.id}`">{{ item.text }}</a>
         <ul v-if="item.children.length > 0">
-          <li v-for="childToc in item.children" :key="childToc.id" class="py-1">
-            <a :href="`#${item.id}`" class="text-wrap inline-block w-full break-all">{{ childToc.text }}</a>
+          <li v-for="childToc in item.children" :key="childToc.id" class="py-1 text-wrap block">
+            <a :href="`#${item.id}`" class="text-wrap block w-full">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>
