@@ -47,31 +47,47 @@ tocs.forEach((toc) => {
         v-for="item in parentTocList"
         :key="item.id"
         class="py-1 text-wrap inline-block w-full break-all !break-words"
+        style="
+          overflow-wrap: anywhere !important;
+          word-break: break-all !important;
+        "
       >
-        <a :href="`#${item.id}`" class="block !break-words">{{
-          item.text
-        }}</a>
+        <a
+          :href="`#${item.id}`"
+          class="block !break-words"
+          style="
+            overflow-wrap: anywhere !important;
+            word-break: break-all !important;
+          "
+          >{{ item.text }}</a
+        >
         <ul
           v-if="item.children.length > 0"
           class="block break-all text-wrap !break-words"
+          style="
+            overflow-wrap: anywhere !important;
+            word-break: break-all !important;
+          "
         >
           <li
             v-for="childToc in item.children"
             :key="childToc.id"
-            class="py-1 text-wrap break-all !break-words !block !w-full"
+            class="py-1 text-wrap break-all !block !w-full"
+            style="
+              overflow-wrap: anywhere !important;
+              word-break: break-all !important;
+            "
           >
-            <div>
-              <a
-                :href="`#${item.id}`"
-                class=""
-                style="
-                  word-wrap: break-word !important;
-                  word-break: break-all !important;
-                "
-              >
-                {{ childToc.text }}</a
-              >
-            </div>
+            <a
+              :href="`#${item.id}`"
+              class=""
+              style="
+                overflow-wrap: anywhere !important;
+                word-break: break-all !important;
+              "
+            >
+              {{ childToc.text }}</a
+            >
           </li>
         </ul>
       </li>
