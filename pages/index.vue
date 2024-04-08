@@ -30,7 +30,7 @@ watch(
 <template>
   <div>
     <template v-if="pending">
-      loading now...
+      <span class="loading loading-dots loading-md"></span>
     </template>
     <template v-else>
       <!-- <BlogSearchForm class="mb-4 md:hidden" /> -->

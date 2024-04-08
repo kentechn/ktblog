@@ -28,7 +28,7 @@ watch(data, (newData) => {
       </BaseText>
     </h2>
     <template v-if="pending">
-      loading now...
+      <span class="loading loading-dots loading-md"></span>
     </template>
     <template v-else>
       <BlogCardList />

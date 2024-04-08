@@ -35,7 +35,7 @@ const headings = $('h1, h2, h3').toArray();
 
 <template>
   <div class="container mx-auto">
-    <div v-if="pending">loading now...</div>
+    <div v-if="pending"><span class="loading loading-dots loading-md"></span></div>
     <div v-else>
       <div>
         <div class="p-4 mb-6 bg-white border rounded">

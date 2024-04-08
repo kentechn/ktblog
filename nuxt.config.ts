@@ -28,11 +28,5 @@ export default defineNuxtConfig({
         { name: "description", content: "tech blog site." },
       ],
     },
-  },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+  }
 })
