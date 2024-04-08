@@ -41,23 +41,21 @@ tocs.forEach((toc) => {
   <div class="p-4 bg-base-200 rounded-md">
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
     <ul
-      class="menu bg-base-200 rounded-box mt-3 inline-block w-full break-all text-wrap"
+      class="bg-base-200 rounded-box mt-3"
     >
       <li
         v-for="item in parentTocList"
         :key="item.id"
-        class="py-1 text-wrap inline-block w-full break-all"
-        style="overflow-wrap: break-all"
+        class="py-1"
       >
-        <a :href="`#${item.id}`" class="block">{{ item.text }}</a>
-        <ul v-if="item.children.length > 0" class="block break-all text-wrap">
+        <a :href="`#${item.id}`" class="link link-hover">{{ item.text }}</a>
+        <ul v-if="item.children.length > 0" class="">
           <li
             v-for="childToc in item.children"
             :key="childToc.id"
-            class="py-1 text-wrap break-all block w-full"
-            style="overflow-wrap: break--all"
+            class="py-1 ml-4"
           >
-            <a :href="`#${item.id}`">{{ childToc.text }}</a>
+            <a :href="`#${item.id}`" class="link link-hover">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>
