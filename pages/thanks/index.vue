@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import BaseText from "~/components/elements/texts/BaseText.vue"
 
+useHead({
+  title: "thanks",
+  meta: [
+    {
+      name: "description",
+      content: "技術ブログ お問い合わせ完了ページ",
+    },
+  ],
+})
 </script>
 
 <template>

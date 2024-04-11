@@ -7,7 +7,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "お問い合わせページ",
+      content: "技術ブログ お問い合わせページ",
     },
   ],
 })

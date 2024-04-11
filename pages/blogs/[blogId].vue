@@ -10,7 +10,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '記事詳細ページ',
+      content: '技術ブログ 記事詳細ページ',
     },
   ],
 });

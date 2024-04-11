@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import BlogCardList from "~/features/blogs/components/BlogCardList.vue"
 import BaseText from "~/components/elements/texts/BaseText.vue"
-import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
 
+useHead({
+  title: "tag blogs",
+  meta: [
+    {
+      name: "description",
+      content: "技術ブログ 対象のタグに属する記事一覧ページ",
+    },
+  ],
+})
 const route = useRoute()
 
 const { getBlogs, setBlogsFetchData, selectedTagId } = useBlogs()
