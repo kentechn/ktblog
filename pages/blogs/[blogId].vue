@@ -50,9 +50,15 @@ const headings = $('h1, h2, h3').toArray();
           <div class="my-12 mx-auto max-w-xl">
             <Toc :headings="headings" />
           </div>
-          <div class="prose leading-7 mx-auto" v-html="body" />
+          <div class="prose leading-7 mx-auto break-all" v-html="body" />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.prose {
+  max-width: 80ch;
+}
+</style>
