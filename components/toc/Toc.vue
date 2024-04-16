@@ -41,7 +41,7 @@ tocs.forEach((toc) => {
   <div class="p-4 bg-base-200 rounded-md break-words">
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
     <ul
-      class="menu bg-base-200 rounded-box mt-3"
+      class="menu bg-base-200 rounded-box mt-3 break-words"
     >
       <li
         v-for="item in parentTocList"
