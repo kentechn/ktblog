@@ -17,9 +17,10 @@ defineProps<Props>()
       <div class="text-right">
         <BlogUpdatedAt :updated-at="blogCardItem.updatedAt" />
       </div>
-      <h2 class="text-xl font-semibold px-2 mb-4">
+      <h2 class="text-xl font-semibold px-2 mb-1">
         {{ blogCardItem.title }}
       </h2>
+      <div class="divider my-1" />
       <TagList :tags="blogCardItem.tags" />
     </div>
   </Card>

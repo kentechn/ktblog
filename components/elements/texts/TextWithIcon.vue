@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseIcon from "../icons/BaseIcon.vue"
 import BaseText from "./BaseText.vue"
+import NuxtIcon from "../icons/NuxtIcon.vue";
 
 interface Props {
   iconName: string
@@ -23,7 +23,7 @@ withDefaults(defineProps<Props>(), {
 <template>
   <div class="inline-block">
     <div class="flex rounded-sm items-baseline">
-      <BaseIcon
+      <NuxtIcon
         :name="iconName"
         :size="iconSize"
         :color="iconColor"

@@ -34,7 +34,6 @@ const headings = $('h1, h2, h3').toArray();
 </script>
 
 <template>
-  <div class="container mx-auto">
     <div v-if="pending"><span class="loading loading-dots loading-md"></span></div>
     <div v-else>
       <div>
@@ -54,7 +53,6 @@ const headings = $('h1, h2, h3').toArray();
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

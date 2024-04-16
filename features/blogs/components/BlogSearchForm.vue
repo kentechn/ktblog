@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseIcon from '@/components/elements/icons/BaseIcon.vue';
 import { useBlogs } from '@/composables/useBlogs';
+import NuxtIcon from '~/components/elements/icons/NuxtIcon.vue';
 
 const { searchQuery } = useBlogs();
 
@@ -25,7 +25,7 @@ const searchBlogs = async () => {
         class="inline-flex items-center px-3 text-sm bg-primary rounded-r-md cursor-pointer transition duration-700 hover:bg-primary-content"
         @click="searchBlogs"
       >
-        <BaseIcon name="i-eva-search-fill" class="text-base-100" size="20" />
+        <NuxtIcon name="i-eva-search-fill" class="text-base-100" size="20" />
       </span>
     </div>
   </form>
