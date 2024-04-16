@@ -20,8 +20,8 @@ const items: Item[] = [
 
 const router = useRouter();
 
-const onClickLogo = async () => {
-  await router.push('/');
+const goPage = async (link: string) => {
+  await router.push(link);
   reloadNuxtApp();
 };
 </script>
@@ -41,13 +41,13 @@ const onClickLogo = async () => {
     <div class="navbar bg-base-100 drop-shadow-lg">
       <div class="container mx-auto px-2">
         <div class="flex-1">
-          <Logo @click="onClickLogo" />
+          <Logo @click="goPage('/')" />
         </div>
         <ul class="menu menu-horizontal px-1">
           <li v-for="(item, i) in items" :key="i" class="ml-2">
-            <NuxtLink :to="item.link">
+            <p @click="goPage(item.link)">
               {{ item.text }}
-            </NuxtLink>
+            </p>
           </li>
         </ul>
       </div>

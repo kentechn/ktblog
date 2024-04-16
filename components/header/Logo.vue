@@ -1,5 +1,3 @@
 <template>
-  <NuxtLink to="/">
-    <span class="self-center text-xl font-bold font-logo whitespace-nowrap">KtBlog</span>
-  </NuxtLink>
+    <span class="self-center text-xl font-bold font-mono whitespace-nowrap cursor-pointer">KtBlog</span>
 </template>
