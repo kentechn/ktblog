@@ -38,24 +38,24 @@ tocs.forEach((toc) => {
 </script>
 
 <template>
-  <div class="p-4 bg-base-200 rounded-md">
+  <div class="p-4 bg-base-200 rounded-md break-words">
     <BaseText size="lg" weight="bold"> 目次 </BaseText>
     <ul
-      class="bg-base-200 rounded-box mt-3"
+      class="menu bg-base-200 rounded-box mt-3"
     >
       <li
         v-for="item in parentTocList"
         :key="item.id"
         class="py-1"
       >
-        <a :href="`#${item.id}`" class="link link-hover">{{ item.text }}</a>
-        <ul v-if="item.children.length > 0" class="">
+        <a :href="`#${item.id}`" >{{ item.text }}</a>
+        <ul v-if="item.children.length > 0" >
           <li
             v-for="childToc in item.children"
             :key="childToc.id"
             class="py-1 ml-4"
           >
-            <a :href="`#${item.id}`" class="link link-hover">{{ childToc.text }}</a>
+            <a :href="`#${item.id}`">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>
