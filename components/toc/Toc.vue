@@ -55,7 +55,7 @@ tocs.forEach((toc) => {
             :key="childToc.id"
             class="py-2 ml-4"
           >
-            <a :href="`#${item.id}`" class="link link-hover">{{ childToc.text }}</a>
+            <a :href="`#${childToc.id}`" class="link link-hover">{{ childToc.text }}</a>
           </li>
         </ul>
       </li>

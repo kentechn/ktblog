@@ -5,8 +5,14 @@ import 'highlight.js/styles/hybrid.css';
 import BlogUpdatedAt from '@/features/blogs/components/BlogUpdatedAt.vue';
 import TagList from '@/components/tags/TagList.vue';
 
+
+
+const { getBlog } = useBlogs();
+
+const { data: blog, pending } = await getBlog();
+
 useHead({
-  title: 'blog',
+  title: blog.value?.title,
   meta: [
     {
       name: 'description',
@@ -15,9 +21,6 @@ useHead({
   ],
 });
 
-const { getBlog } = useBlogs();
-
-const { data: blog, pending } = await getBlog();
 
 const content = blog.value !== null ? blog.value.content : '';
 

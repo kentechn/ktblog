@@ -4,7 +4,7 @@ import BlogCardList from "~/features/blogs/components/BlogCardList.vue"
 import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
 
 useHead({
-  title: "home",
+  title: "Home",
   meta: [
     {
       name: "description",
@@ -12,7 +12,6 @@ useHead({
     },
   ],
 })
-// watch(() => route.query, () => location.reload())
 const { getBlogs, setBlogsFetchData } = useBlogs()
 const { data, pending } = await getBlogs()
 

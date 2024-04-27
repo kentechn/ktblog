@@ -3,7 +3,7 @@ import BlogCardList from "~/features/blogs/components/BlogCardList.vue"
 import BaseText from "~/components/elements/texts/BaseText.vue"
 
 useHead({
-  title: "tag blogs",
+  title: "タグ別ブログ一覧",
   meta: [
     {
       name: "description",
