@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+interface Pops {
+  id: string;
+  text: string;
+}
+
+defineProps<Pops>();
+</script>
+
+<template>
+  <a
+    :href="`#${id}`"
+    class="link link-hover hover:opacity-50 hover:duration-300"
+    >{{ text }}</a
+  >
+</template>
+
+<style scoped></style>

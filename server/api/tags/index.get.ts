@@ -1,6 +1,6 @@
 import { FetchError } from "ofetch"
-import type { TagListResponse } from "~/interfaces"
-import { fetcher } from "@/server/utils/api"
+import type { TagListResponse } from "~~/interfaces"
+import { fetcher } from "~~/server/utils/api"
 
 export default defineEventHandler(async (event) => {
   try {

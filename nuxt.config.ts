@@ -1,14 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+  future: {
+    compatibilityVersion: 4,
+  },
   modules: [
     "@nuxt/eslint", "@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image",
   ],
-  css: ["~/assets/css/main.css", "~/assets/css/blog-detail.css"],
+  css: ["~/assets/css/main.css"],
   runtimeConfig: {
     apiKey: process.env.NUXT_API_KEY,
     serviceDomain: process.env.NUXT_SERVICE_DOMAIN,
-    public: {},
+    public: {
+      apiBaseUrl: "/api",
+    },
   },
   routeRules: {
     "/tags/**": { ssr: true },
