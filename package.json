@@ -8,27 +8,34 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:safari": "playwright test --headed --browser=webkit"
+    "test:safari": "playwright test --headed --browser=webkit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/image": "^1.5.0",
-    "cheerio": "^1.0.0-rc.12",
-    "highlight.js": "^11.9.0",
+    "@nuxt/image": "^1.8.1",
+    "cheerio": "^1.0.0",
+    "dompurify": "^3.1.7",
+    "highlight.js": "^11.10.0",
     "microcms-js-sdk": "^3.1.0",
-    "nuxt": "^3.11.1",
-    "vee-validate": "^4.12.6",
-    "vue": "^3.4.21",
-    "vue-awesome-paginate": "^1.1.46",
-    "vue-router": "^4.3.0",
+    "nuxt": "^3.13.2",
+    "vee-validate": "^4.14.3",
+    "vue": "^3.5.12",
+    "vue-awesome-paginate": "^1.2.0",
+    "vue-router": "^4.4.5",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.3.0-beta.7",
-    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@nuxt/eslint": "^0.6.0",
+    "@nuxtjs/tailwindcss": "^6.12.2",
     "@playwright/test": "^1.43.0",
     "@tailwindcss/typography": "^0.5.12",
-    "daisyui": "^4.9.0",
-    "eslint": "^8.57.0",
+    "@types/dompurify": "^3.0.5",
+    "daisyui": "^4.12.13",
+    "eslint": "^9.13.0",
     "nuxt-icon": "^0.6.10"
+  },
+  "volta": {
+    "node": "20.12.1"
   }
 }

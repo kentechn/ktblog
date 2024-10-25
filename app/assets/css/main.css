@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+
+@tailwind base;
+@layer base {
+  html {
+    /* @apply text-black; */
+    @apply font-main;
+    /* @apply text-lg; */
+  }
+  body {
+    @apply bg-main-background;
+    @apply min-h-[100vh];
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
