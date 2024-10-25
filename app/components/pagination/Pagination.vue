@@ -5,29 +5,10 @@ const router = useRouter();
 const route = useRoute();
 
 const onClickPageNum = async (page: number) => {
+  const path = route.params.tagName ? `/tags/${route.params.tagName}` : "/";
 
-  if (route.params.tagName) {
-    await navigateTo(
-      {
-        path: `/tags/${route.params.tagName}`,
-        query: { page },
-      },
-      {
-        external: true,
-      }
-    );
-    // router.push({ path: `/tags/${route.params.tagName}`, query: { page } });
-  } else {
-    await navigateTo(
-      {
-        path: "/",
-        query: { page },
-      },
-      {
-        external: true,
-      }
-    );
-  }
+  await navigateTo({ path, query: { page } }, { external: true });
+
   currentPage.value = page;
 
   router.afterEach(() => {

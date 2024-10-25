@@ -4,7 +4,7 @@ interface Props {
   text: string;
 }
 
-defineProps<Pops>();
+defineProps<Props>();
 </script>
 
 <template>

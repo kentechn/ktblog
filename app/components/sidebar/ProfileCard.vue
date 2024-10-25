@@ -20,7 +20,6 @@ import ProfileImg from "./ProfileImg.vue"
         <strong>FW：</strong>Vue, React, FastAPI, Flask, Django, Streamlit<br>
         <strong>クラウド：</strong>AWS<br>
       </p>
-      <SidebarCardBody />
-    </sidebarcardbody>
+    </SidebarCardBody>
   </Card>
 </template>
