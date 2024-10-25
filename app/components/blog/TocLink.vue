@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-interface Pops {
+interface Props {
   id: string;
   text: string;
 }
