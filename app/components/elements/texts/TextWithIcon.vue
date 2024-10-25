@@ -22,12 +22,14 @@ withDefaults(defineProps<Props>(), {
 <template>
   <div class="inline-block">
     <div class="flex rounded-sm items-baseline">
-      <NuxtIcon
+      <div>
+        <NuxtIcon
         :name="iconName"
         :size="iconSize"
         :color="iconColor"
         class="mx-2"
       />
+      </div>
       <p :color="textColor" :weight="fontWeight" :size="textSize" class="leading-loose inline">
         <slot />
       </p>

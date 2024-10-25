@@ -12,5 +12,5 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <Icon :name="name" :size="size"/>
+    <Icon :name="name" :size="size" />
 </template>
