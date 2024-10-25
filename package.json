@@ -8,7 +8,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:safari": "playwright test --headed --browser=webkit"
+    "test:safari": "playwright test --headed --browser=webkit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",

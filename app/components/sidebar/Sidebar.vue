@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ProfileCard from "./ProfileCard.vue"
 import TagsCard from "./TagsCard.vue"
-import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
 </script>
 
 <template>
@@ -12,4 +11,4 @@ import BlogSearchForm from "~/features/blogs/components/BlogSearchForm.vue";
   </div>
 </template>
 
-<style scoped></style>../../features/blogs/components/BlogSearchForm.vue
+<style scoped></style>

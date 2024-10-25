@@ -35,6 +35,7 @@ useHead({
       <div class="my-8 max-w-xl">
         <BlogToc :tocs="tocs" />
       </div>
+      <!-- eslint-disable vue/no-v-html -->
       <div class="prose leading-7 mx-auto break-all" v-html="blog?.content" />
     </div>
   </div>
