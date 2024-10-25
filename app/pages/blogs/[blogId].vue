@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import "highlight.js/styles/hybrid.css";
-import TagList from "@/components/tags/TagList.vue";
+import "highlight.js/styles/hybrid.css"
+import TagList from "@/components/tags/TagList.vue"
 
-const { blog, isPending, processBlogContent, tocs } = useBlog();
+const { blog, isPending, processBlogContent, tocs } = useBlog()
 
 onMounted(() => {
   // ブログコンテンツ表示の前処理
-  processBlogContent();
-});
+  processBlogContent()
+})
 
 useHead({
   title: blog.value?.title,
@@ -17,11 +17,13 @@ useHead({
       content: "技術ブログ 記事詳細ページ",
     },
   ],
-});
+})
 </script>
 
 <template>
-  <div v-if="isPending"><span class="loading loading-dots loading-md" /></div>
+  <div v-if="isPending">
+    <span class="loading loading-dots loading-md" />
+  </div>
   <div v-else>
     <div class="p-6 mb-6 bg-white dark:bg-slate-800 border rounded dark:border-slate-600">
       <h1 class="text-2xl font-semibold mb-6 break-words">
@@ -36,7 +38,10 @@ useHead({
         <BlogToc :tocs="tocs" />
       </div>
       <!-- eslint-disable vue/no-v-html -->
-      <div class="prose leading-7 mx-auto break-all" v-html="blog?.content" />
+      <div
+        class="prose leading-7 mx-auto break-all"
+        v-html="blog?.content"
+      />
     </div>
   </div>
 </template>

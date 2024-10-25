@@ -14,7 +14,10 @@ useHead({
 
 <template>
   <div class="container mx-auto">
-    <BaseText weight="semibold" size="xl">
+    <BaseText
+      weight="semibold"
+      size="xl"
+    >
       お問い合わせ完了
     </BaseText>
     <div class="mb-6">
@@ -23,7 +26,10 @@ useHead({
     <div class="mb-6">
       <BaseText>お問い合わせいただきありがとうございます。</BaseText>
     </div>
-    <button class="btn" @click="$router.push('/')">
+    <button
+      class="btn"
+      @click="$router.push('/')"
+    >
       homeに戻る
     </button>
   </div>

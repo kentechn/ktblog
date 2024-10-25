@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NuxtIcon from "../icons/NuxtIcon.vue";
+import NuxtIcon from "../icons/NuxtIcon.vue"
 
 interface Props {
   iconName: string
@@ -24,13 +24,18 @@ withDefaults(defineProps<Props>(), {
     <div class="flex rounded-sm items-baseline">
       <div>
         <NuxtIcon
-        :name="iconName"
-        :size="iconSize"
-        class="mx-2"
-        :icon-cls="iconCls"
-      />
+          :name="iconName"
+          :size="iconSize"
+          class="mx-2"
+          :icon-cls="iconCls"
+        />
       </div>
-      <p :color="textColor" :weight="fontWeight" :size="textSize" class="leading-loose inline">
+      <p
+        :color="textColor"
+        :weight="fontWeight"
+        :size="textSize"
+        class="leading-loose inline"
+      >
         <slot />
       </p>
     </div>

@@ -1,6 +1,6 @@
-import type { CheerioAPI } from "cheerio";
-import hljs from "highlight.js";
-import type { Toc } from "~~/interfaces";
+import type { CheerioAPI } from "cheerio"
+import hljs from "highlight.js"
+import type { Toc } from "~~/interfaces"
 
 /**
  * UTC時間の日付(string型)を日本時間の日付(string型)に変換
@@ -26,33 +26,33 @@ export const formatUTCToJpDate = (date: string) => {
 }
 
 export function generateToc($: CheerioAPI) {
-  const tocs: Toc[] = [];
-  const headings = $("h2, h3").toArray();
+  const tocs: Toc[] = []
+  const headings = $("h2, h3").toArray()
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   headings.forEach((heading: any) => {
-    const id = heading.attribs.id;
-    const text =
-      heading.children[0].data ?? heading.children[0].children[0].data;
+    const id = heading.attribs.id
+    const text
+      = heading.children[0].data ?? heading.children[0].children[0].data
 
     if (heading.name === "h2") {
-      tocs.push({ id, text, children: [] });
-    } else if (heading.name === "h3") {
-      const parentToc = tocs[tocs.length - 1];
-      parentToc?.children?.push({ id, text });
+      tocs.push({ id, text, children: [] })
     }
-  });
+    else if (heading.name === "h3") {
+      const parentToc = tocs[tocs.length - 1]
+      parentToc?.children?.push({ id, text })
+    }
+  })
 
-  return tocs;
+  return tocs
 }
-
 
 export function highlightHtml($: CheerioAPI) {
   $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
-  });
+    const result = hljs.highlightAuto($(elm).text())
+    $(elm).html(result.value)
+    $(elm).addClass("hljs")
+  })
 
-  return $;
+  return $
 }

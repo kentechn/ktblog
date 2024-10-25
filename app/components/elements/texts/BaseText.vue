@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue"
+
 interface Props {
   weight?: "light" | "normal" | "medium" | "semibold" | "bold"
   color?: string
@@ -26,7 +27,10 @@ const fontSize = computed(() => {
 </script>
 
 <template>
-  <p :class="[fontColor, fontWeight, fontSize]" class="leading-loose inline">
+  <p
+    :class="[fontColor, fontWeight, fontSize]"
+    class="leading-loose inline"
+  >
     <slot />
   </p>
 </template>

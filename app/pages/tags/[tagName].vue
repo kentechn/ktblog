@@ -30,12 +30,15 @@ watch(data, (newData) => {
   <div class="px-2">
     <!-- <BlogSearchForm class="mb-4 md:hidden" /> -->
     <h2 class="mb-4">
-      <BaseText weight="semibold" size="xl">
+      <BaseText
+        weight="semibold"
+        size="xl"
+      >
         {{ route.params.tagName }}
       </BaseText>
     </h2>
     <template v-if="pending">
-      <span class="loading loading-dots loading-md"/>
+      <span class="loading loading-dots loading-md" />
     </template>
     <template v-else>
       <BlogCardList />

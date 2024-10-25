@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { formatUTCToJpDate } from "@/utils";
-import TextWithIcon from "~/components/elements/texts/TextWithIcon.vue";
+import { formatUTCToJpDate } from "@/utils"
+import TextWithIcon from "~/components/elements/texts/TextWithIcon.vue"
 
 interface Props {
-  updatedAt: string;
+  updatedAt: string
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
 
 <template>

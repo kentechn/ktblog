@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { FETCH_BLOGS_LIMIT } from "@/constants";
-const { currentPage, totalCount } = useBlogs();
-const router = useRouter();
-const route = useRoute();
+import { FETCH_BLOGS_LIMIT } from "@/constants"
+
+const { currentPage, totalCount } = useBlogs()
+const router = useRouter()
+const route = useRoute()
 
 const onClickPageNum = async (page: number) => {
-  const path = route.params.tagName ? `/tags/${route.params.tagName}` : "/";
+  const path = route.params.tagName ? `/tags/${route.params.tagName}` : "/"
 
-  await navigateTo({ path, query: { page } }, { external: true });
+  await navigateTo({ path, query: { page } }, { external: true })
 
-  currentPage.value = page;
+  currentPage.value = page
 
   router.afterEach(() => {
-    window.scrollTo(0, 0);
-  });
-};
+    window.scrollTo(0, 0)
+  })
+}
 </script>
 
 <template>

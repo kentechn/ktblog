@@ -1,10 +1,9 @@
 import type { Blog, BlogListResponse, BlogCardItem } from "~~/interfaces"
 import { FETCH_BLOGS_LIMIT } from "@/constants"
 
-
 export const setSelectedTagId = (selectedTagId: Ref<string>) => (tagId: string) => {
-    selectedTagId.value = tagId
-  }
+  selectedTagId.value = tagId
+}
 
 export const setBlogsFetchData
   = (blogs: Ref<BlogCardItem[]>, totalCount: Ref<number>) =>
@@ -79,11 +78,11 @@ export const getBlogs
       })
 
       const { data, pending, error, refresh } = await useAsyncData(
-      `/api/blogs/${query}`,
-      () => {
-        return $fetch("/api/blogs", { query })
-      },
-      {
+        `/api/blogs/${query}`,
+        () => {
+          return $fetch("/api/blogs", { query })
+        },
+        {
         // transform: (data) => {
         //   const transformedData = data.contents.map((blog) => {
         //     return {
@@ -94,10 +93,10 @@ export const getBlogs
         //     }
         //   })
 
-        //   return transformedData
-        // },
-        watch: [query],
-      },
+          //   return transformedData
+          // },
+          watch: [query],
+        },
       )
 
       if (data.value) {

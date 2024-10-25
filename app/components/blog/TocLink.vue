@@ -1,18 +1,17 @@
 <script lang="ts" setup>
 interface Props {
-  id: string;
-  text: string;
+  id: string
+  text: string
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
 
 <template>
   <a
     :href="`#${id}`"
     class="link link-hover hover:opacity-50 hover:duration-300"
-    >{{ text }}</a
-  >
+  >{{ text }}</a>
 </template>
 
 <style scoped></style>

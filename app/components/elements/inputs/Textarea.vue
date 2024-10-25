@@ -17,7 +17,11 @@ const inputValue = defineModel<string>("inputValue")
 </script>
 
 <template>
-  <label v-if="labelName" :for="id" class="block text-sm font-bold mb-2">
+  <label
+    v-if="labelName"
+    :for="id"
+    class="block text-sm font-bold mb-2"
+  >
     {{ labelName }}
   </label>
   <textarea

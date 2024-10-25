@@ -1,40 +1,56 @@
 <script setup lang="ts">
-import NuxtIcon from '../elements/icons/NuxtIcon.vue';
-import Logo from './Logo.vue';
+import NuxtIcon from "../elements/icons/NuxtIcon.vue"
+import Logo from "./Logo.vue"
 
 interface Item {
-  link: string;
-  text: string;
+  link: string
+  text: string
 }
 
 const items: Item[] = [
   {
-    link: '/',
-    text: 'ホーム',
+    link: "/",
+    text: "ホーム",
   },
   {
-    link: '/contact',
-    text: 'お問い合わせ',
+    link: "/contact",
+    text: "お問い合わせ",
   },
-];
+]
 
-const router = useRouter();
+const router = useRouter()
 
 const goPage = async (link: string) => {
-  await router.push(link);
-  reloadNuxtApp();
-};
+  await router.push(link)
+  reloadNuxtApp()
+}
 </script>
 
 <template>
   <header>
     <div class="text-right bg-black py-1">
       <div class="container mx-auto d-flex">
-        <a href="https://github.com/kentechn" target="_blank">
-          <NuxtIcon size="24" name="uil:github" class="inline mr-4" icon-cls="text-white dark:text-slate-400" />
+        <a
+          href="https://github.com/kentechn"
+          target="_blank"
+        >
+          <NuxtIcon
+            size="24"
+            name="uil:github"
+            class="inline mr-4"
+            icon-cls="text-white dark:text-slate-400"
+          />
         </a>
-        <a href="https://twitter.com/kenboo5346" target="_blank">
-          <NuxtIcon size="18" name="prime:twitter" class="inline max-md:mr-2" icon-cls="text-white dark:text-slate-400" />
+        <a
+          href="https://twitter.com/kenboo5346"
+          target="_blank"
+        >
+          <NuxtIcon
+            size="18"
+            name="prime:twitter"
+            class="inline max-md:mr-2"
+            icon-cls="text-white dark:text-slate-400"
+          />
         </a>
       </div>
     </div>
@@ -44,7 +60,11 @@ const goPage = async (link: string) => {
           <Logo @click="goPage('/')" />
         </div>
         <ul class="menu menu-horizontal px-1">
-          <li v-for="(item, i) in items" :key="i" class="ml-2">
+          <li
+            v-for="(item, i) in items"
+            :key="i"
+            class="ml-2"
+          >
             <p @click="goPage(item.link)">
               {{ item.text }}
             </p>

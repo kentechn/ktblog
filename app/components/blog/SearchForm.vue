@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useBlogs } from '@/composables/useBlogs';
-import NuxtIcon from '~/components/elements/icons/NuxtIcon.vue';
+import { useBlogs } from "@/composables/useBlogs"
+import NuxtIcon from "~/components/elements/icons/NuxtIcon.vue"
 
-const { searchQuery } = useBlogs();
+const { searchQuery } = useBlogs()
 
-const inputValue = ref('');
+const inputValue = ref("")
 
 const searchBlogs = async () => {
   searchQuery.value = inputValue.value
-  await navigateTo({ path: '/', query: { q: inputValue.value } });
-};
+  await navigateTo({ path: "/", query: { q: inputValue.value } })
+}
 </script>
 
 <template>
@@ -25,7 +25,11 @@ const searchBlogs = async () => {
         class="inline-flex items-center px-3 text-sm bg-primary rounded-r-md cursor-pointer transition duration-700 hover:bg-primary-content"
         @click="searchBlogs"
       >
-        <NuxtIcon name="i-eva-search-fill" class="text-base-100" size="20" />
+        <NuxtIcon
+          name="i-eva-search-fill"
+          class="text-base-100"
+          size="20"
+        />
       </span>
     </div>
   </form>

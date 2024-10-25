@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { object, string, setLocale } from "yup";
-import { useField, useForm, ErrorMessage } from "vee-validate";
+import { object, string, setLocale } from "yup"
+import { useField, useForm, ErrorMessage } from "vee-validate"
 
 setLocale({
   mixed: {
@@ -9,13 +9,13 @@ setLocale({
   string: {
     email: "メールアドレスの形式ではありません。",
   },
-});
+})
 
 const schema = object({
   name: string().required().label("名前"),
   email: string().required().email().label("メールアドレス"),
   content: string().required().label("お問い合わせ内容"),
-});
+})
 
 const { isSubmitting, submitForm, isFieldDirty } = useForm({
   validationSchema: schema,
@@ -24,12 +24,12 @@ const { isSubmitting, submitForm, isFieldDirty } = useForm({
     email: "",
     content: "",
   },
-});
+})
 
-const botFieldValue = ref("");
-const { value: name } = useField<string>("name");
-const { value: email } = useField<string>("email");
-const { value: content } = useField<string>("content");
+const botFieldValue = ref("")
+const { value: name } = useField<string>("name")
+const { value: email } = useField<string>("email")
+const { value: content } = useField<string>("content")
 </script>
 
 <template>
@@ -43,7 +43,11 @@ const { value: content } = useField<string>("content");
     @submit="submitForm"
   >
     <!-- 下記がないとpage not foundになる -->
-    <input type="hidden" name="form-name" value="contact" >
+    <input
+      type="hidden"
+      name="form-name"
+      value="contact"
+    >
     <div class="mb-5">
       <!-- <ContactFormEmailInput v-model:input-value="name" /> -->
       <FormInput
@@ -53,7 +57,10 @@ const { value: content } = useField<string>("content");
         name="name"
         label-name="名前"
       />
-      <ErrorMessage name="name" class="text-error" />
+      <ErrorMessage
+        name="name"
+        class="text-error"
+      />
     </div>
     <div class="mb-5">
       <FormInput
@@ -63,7 +70,10 @@ const { value: content } = useField<string>("content");
         name="email"
         label-name="メールアドレス"
       />
-      <ErrorMessage name="email" class="text-error" />
+      <ErrorMessage
+        name="email"
+        class="text-error"
+      />
     </div>
 
     <div class="mb-8">
@@ -74,14 +84,28 @@ const { value: content } = useField<string>("content");
         name="content"
         label-name="お問い合わせ内容"
       />
-      <ErrorMessage name="content" class="text-error" />
+      <ErrorMessage
+        name="content"
+        class="text-error"
+      />
     </div>
-    <div v-show="false" class="contact_item">
+    <div
+      v-show="false"
+      class="contact_item"
+    >
       <label for="message">スパムでない場合は空欄</label>
-      <input v-model="botFieldValue" type="text" name="bot-field" >
+      <input
+        v-model="botFieldValue"
+        type="text"
+        name="bot-field"
+      >
     </div>
     <div class="text-center">
-      <button type="submit" class="btn px-8 btn-outline" :disabled="isSubmitting">
+      <button
+        type="submit"
+        class="btn px-8 btn-outline"
+        :disabled="isSubmitting"
+      >
         送信
       </button>
     </div>
