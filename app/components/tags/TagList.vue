@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TagListItem from "./TagListItem.vue"
-import type { Tag } from "@/interfaces"
+import type { Tag } from "~~/interfaces"
 
 interface Props {
   tags?: Tag[]

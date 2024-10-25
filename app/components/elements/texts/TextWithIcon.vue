@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BaseText from "./BaseText.vue"
 import NuxtIcon from "../icons/NuxtIcon.vue";
 
 interface Props {
@@ -29,9 +28,9 @@ withDefaults(defineProps<Props>(), {
         :color="iconColor"
         class="mx-2"
       />
-      <BaseText :color="textColor" :weight="fontWeight" :size="textSize">
+      <p :color="textColor" :weight="fontWeight" :size="textSize" class="leading-loose inline">
         <slot />
-      </BaseText>
+      </p>
     </div>
   </div>
 </template>

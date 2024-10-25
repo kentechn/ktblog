@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import BaseText from "~/components/elements/texts/BaseText.vue"
-
 useHead({
   title: "contact",
   meta: [
@@ -15,9 +13,9 @@ useHead({
 <template>
   <div class="container mx-auto">
     <div class="mb-5">
-      <BaseText weight="semibold" size="xl">
+      <p class="text-xl font-semibold">
         お問い合わせ
-      </BaseText>
+      </p>
     </div>
     <ContactForm />
   </div>

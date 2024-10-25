@@ -14,7 +14,7 @@ const heightClass = computed(() => {
 
 <template>
   <div
-    class="border border-base-300 bg-base-100 rounded-lg shadow-md shadow-base-300 p-0"
+    class="border border-base-300 bg-base-100 rounded-lg"
     :class="heightClass"
   >
     <slot />

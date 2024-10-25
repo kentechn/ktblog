@@ -13,6 +13,6 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <div>
-    <Icon :name="name" :color="color" :size="size"/>
+    <Icon :name="name" :size="size"/>
   </div>
 </template>

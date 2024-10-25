@@ -27,7 +27,7 @@ const inputValue = defineModel<string>("inputValue")
     v-model="inputValue"
     :rows="rows"
     :name="name"
-    class="block p-2.5 w-full text-sm rounded-lg border-2 border-gray-400 focus:outline-none focus:ring-2"
+    class="block p-2.5 w-full text-sm rounded-lg border-2 focus:outline-none focus:ring-2"
     :class="{ '!border-danger': isError }"
   />
 </template>
