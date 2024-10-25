@@ -4,7 +4,7 @@ import NuxtIcon from "../icons/NuxtIcon.vue";
 interface Props {
   iconName: string
   iconSize?: "12" | "16" | "20"
-  iconColor?: string
+  iconCls?: string
   fontWeight?: "light" | "normal" | "medium" | "semibold" | "bold"
   textColor?: string
   textSize?: "xs" | "sm" | "base" | "lg" | "xl"
@@ -12,7 +12,7 @@ interface Props {
 
 withDefaults(defineProps<Props>(), {
   iconSize: "16",
-  iconColor: "black",
+  iconCls: "",
   fontWeight: "normal",
   textColor: "black",
   textSize: "base",
@@ -26,8 +26,8 @@ withDefaults(defineProps<Props>(), {
         <NuxtIcon
         :name="iconName"
         :size="iconSize"
-        :color="iconColor"
         class="mx-2"
+        :icon-cls="iconCls"
       />
       </div>
       <p :color="textColor" :weight="fontWeight" :size="textSize" class="leading-loose inline">

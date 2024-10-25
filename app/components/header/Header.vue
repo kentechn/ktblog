@@ -31,10 +31,10 @@ const goPage = async (link: string) => {
     <div class="text-right bg-black py-1">
       <div class="container mx-auto d-flex">
         <a href="https://github.com/kentechn" target="_blank">
-          <NuxtIcon color="white" size="24" name="uil:github" class="inline mr-4" />
+          <NuxtIcon size="24" name="uil:github" class="inline mr-4" icon-cls="text-white dark:text-slate-400" />
         </a>
         <a href="https://twitter.com/kenboo5346" target="_blank">
-          <NuxtIcon color="white" size="18" name="prime:twitter" class="inline max-md:mr-2" />
+          <NuxtIcon size="18" name="prime:twitter" class="inline max-md:mr-2" icon-cls="text-white dark:text-slate-400" />
         </a>
       </div>
     </div>

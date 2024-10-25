@@ -13,7 +13,7 @@ defineProps<Props>()
     <TextWithIcon
       :icon-name="iconName"
       font-weight="semibold"
-      icon-color="primary"
+      icon-cls="text-black dark:text-slate-400"
       text-color="primary"
       icon-size="20"
     >

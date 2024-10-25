@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import { formatUTCToJpDate } from "@/utils"
-import TextWithIcon from "~/components/elements/texts/TextWithIcon.vue"
+import { formatUTCToJpDate } from "@/utils";
+import TextWithIcon from "~/components/elements/texts/TextWithIcon.vue";
 
 interface Props {
-  updatedAt: string
+  updatedAt: string;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <template>
-  <TextWithIcon icon-name="i-tabler-clock-up" icon-size="16" font-weight="light" text-size="sm">
+  <TextWithIcon
+    icon-name="i-tabler-clock-up"
+    icon-size="16"
+    icon-cls="text-black dark:text-slate-400"
+    font-weight="light"
+    text-size="sm"
+  >
     {{ formatUTCToJpDate(updatedAt) }}
   </TextWithIcon>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

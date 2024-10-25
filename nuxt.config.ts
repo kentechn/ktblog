@@ -8,6 +8,15 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/eslint", "@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/image",
   ],
+  eslint: {
+    config: {
+      stylistic: {
+        indent: 2,
+        quotes: "double",
+        semi: false,
+      },
+    },
+  },
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
     apiKey: process.env.NUXT_API_KEY,

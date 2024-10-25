@@ -9,6 +9,7 @@ import TextWithIcon from "../elements/texts/TextWithIcon.vue"
       icon-size="16"
       text-size="sm"
       class="rounded-md bg-base-200 hover:bg-base-300 transition-all duration-500 cursor-pointer px-2"
+      icon-cls="text-black dark:text-slate-400"
     >
       <slot />
     </TextWithIcon>

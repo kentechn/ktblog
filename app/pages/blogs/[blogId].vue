@@ -23,7 +23,7 @@ useHead({
 <template>
   <div v-if="isPending"><span class="loading loading-dots loading-md" /></div>
   <div v-else>
-    <div class="p-6 mb-6 bg-white dark:bg-slate-800 border rounded">
+    <div class="p-6 mb-6 bg-white dark:bg-slate-800 border rounded dark:border-slate-600">
       <h1 class="text-2xl font-semibold mb-6 break-words">
         {{ blog?.title }}
       </h1>
