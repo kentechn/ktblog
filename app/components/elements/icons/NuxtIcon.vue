@@ -9,10 +9,6 @@ withDefaults(defineProps<Props>(), {
   size: "16",
   color: "black",
 })
-</script>
-
 <template>
-  <div>
     <Icon :name="name" :size="size"/>
-  </div>
 </template>
